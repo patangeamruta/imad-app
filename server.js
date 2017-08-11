@@ -84,12 +84,6 @@ var htmlTemplate=`
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/:articleName', function (req, res) {
-    //articleName==article-one
-    //articles[articleName]==article-one
-    var articleName=req.params.articleName
-  res.send(Createtemplate(articles[articleName]));
-});
 
 var counter=0;
 app.get("/counter",function(req,res){
@@ -97,6 +91,15 @@ app.get("/counter",function(req,res){
     res.send(counter.toString());
     
 });
+
+app.get('/:articleName', function (req, res) {
+    //articleName==article-one
+    //articles[articleName]==article-one
+    var articleName=req.params.articleName
+  res.send(Createtemplate(articles[articleName]));
+});
+
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
