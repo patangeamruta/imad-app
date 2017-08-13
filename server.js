@@ -93,8 +93,9 @@ app.get("/counter",function(req,res){
 });
 
 
-var names=[];
+
 app.get('/submit-name',function(req,res){  //URL /submit-name?name=xxxx
+  var names=[];
    var name=req.query.name;
 
    names.push(name);
@@ -105,7 +106,7 @@ app.get('/submit-name',function(req,res){  //URL /submit-name?name=xxxx
 app.get('/:articleName', function (req, res) {
     //articleName==article-one
     //articles[articleName]==article-one
-    var articleName=req.params.articleName
+    var articleName=req.params.articleName;
   res.send(Createtemplate(articles[articleName]));
 });
 
