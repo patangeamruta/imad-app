@@ -43,9 +43,9 @@ submit.onclick=function()
     if(request.readystate===XMLHttpRequest.DONE){
         //Take some Action
         if(request.status===200){
-           var names=['name1','name2'];
-            // var names=request.responseText;
-             //names = JSON.parse(names);
+           //var names=['name1','name2'];
+             var names=request.responseText;
+             names = JSON.parse(names);
               var list='';
               for(var i=0;i<names.length;i++)
               {
@@ -53,14 +53,13 @@ submit.onclick=function()
               }
               var ul=document.getElementById('namelist');
               ul.innerHTML = list;
-            unt');
-            span.innerHTML=counter.toString();
+            
         }
     } 
   };
 
 //Make a request
-request.open('GET','http://patangeamruta16.imad.hasura-app.io/counter',true);
+request.open('GET','http://patangeamruta16.imad.hasura-app.io/submit-name?name=' +name,true);
  request.send(null);
 
             //Capture a list of name and render as list.
