@@ -93,9 +93,9 @@ app.get("/counter",function(req,res){
 });
 
 
-
+var names=[];
 app.get('/submit-name',function(req,res){  //URL /submit-name?name=xxxx
-  var names=[];
+  
    var name=req.query.name;
 
    names.push(name);
