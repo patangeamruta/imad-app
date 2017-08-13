@@ -27,8 +27,7 @@ request.open('GET','http://patangeamruta16.imad.hasura-app.io/counter',true);
 
 //submit name
 
-var nameinput=document.getElementById('name');
-var name=nameinput.value;
+
 var submit=document.getElementById('submit_btn');
 
 
@@ -58,6 +57,8 @@ submit.onclick=function()
     } 
   };
 
+var nameinput=document.getElementById('name');
+var name=nameinput.value;
 //Make a request
 request.open('GET','http://patangeamruta16.imad.hasura-app.io/submit-name?name=' +name,true);
  request.send(null);
