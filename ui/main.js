@@ -62,7 +62,7 @@ submit.onclick=function()
 var nameinput=document.getElementById('name');
 var name=nameinput.value;
 //Make a request
-request.open('GET','http://patangeamruta16.imad.hasura-app.io/submit-name/name=' +name,true);
+request.open('GET','http://patangeamruta16.imad.hasura-app.io/submit-name?name=' +name,true);
  request.send(null);
   
 };
