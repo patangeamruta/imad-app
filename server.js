@@ -152,7 +152,7 @@ app.get('/articles/:articleName', function (req, res) {
             }
         }
     });
-  res.send(Createtemplate(articles[articleData]));
+  
 });
 
 
